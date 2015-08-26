@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>CSC115 -- Intro</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <style>
+    i
+    {
+      color:#d87833;
+    }
+    .reveal section img
+    {
+      background:none;
+      border:none;
+    }
+    .reveal section li
+    {
+      line-height:1.2em;
+      margin-top:0.5em;
+    }
+    .reveal section h1
+    {
+      color:#909090;
+    }
+    .reveal section h2
+    {
+      color:#b8b8b8;
+    }
+    .reveal section h3
+    {
+      color:#b8b8b8;
+    }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+  <section>
+    <h1>CSC115 Intro</h1>
+    <h3>Some preliminary background on computer science and programming.</h3>
+  </section>
+
+  <section>
+    <h2>Computer Science</h2>
+    <i>Computer science</i> is about solving problems by automating processes via algorithms/programs.
+  </section>
+
+  <section>
+    <h2>Algorithm</h2>
+    An <i>algorithm</i> is a sequence of instructions for how to solve a problem.
+  </section>
+
+  <section>
+    <h2>Program</h2>
+    <ul>
+    <li>
+    A computer <i>program</i> is a sequence of instructions written in a
+    computer programming language.
+    </li>
+    <li>
+    It can be <i>executed</i> by a computer.
+    </li>
+    <li>
+    To <i>execute</i> an program/algorithm means to carry out the instructions.
+    </li>
+    </ul>
+  </section>
+
+  <section>
+    
+    <h2>algorithm vs program</h2>
+    <ul>
+      <li>In what way an algorithm is (or is not) different from a program is
+      partly a matter of perspective.</li>
+      <li>An algorithm may be expressed in natural language, whereas a program
+      is by definition written in a computer programming language. Does the natural language
+      description of an algorithm constitute the algorithm itself?
+      Some people would say yes. I prefer to say not necessarily.</li>
+      <li>A general expecation for an algorithm is that its execution eventually
+      comes to an end -- it is supposed to solve a problem, after all.
+      Some programs, on the other hand, run forever (until the computer is
+      powered off, anyway).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Machine Language</h2>
+    <ul>
+      <li>
+        A <i>machine language</i> is the language that a given machine is designed to understand natively.
+      </li>
+      <li>
+        Machine language programs can be executed on a machine directly.
+      </li>
+      <li>
+        Machine language is prohibitively tedious for humans to understand and use, generally.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>High-Level Language</h2>
+    <ul>
+      <li>
+        A <i>high-level language</i> is a programming language that is designed
+        for humans to understand and use.
+      </li>
+      <li>
+        Programs written in high-level languages must be processed somehow into machine
+        language before they can be executed on a machine.
+      </li>
+      <li>
+        Programs written in high-level languages are also called <i>source code</i>.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Machine languages vs &ldquo;low-level languages&rdquo;</h2>
+    Our text equates machine language, <i>assembly language</i>, and <i>low-level language</i> at one point.
+    Assembly language is actually not machine language and programs written in assembly language
+    must be processed into machine language before they can be executed (which our text also does say).
+  </section>
+
+  <section>
+    <h2>Interpreters &amp; Compilers</h2>
+    The primary ways for processing high-level languages into machine languages
+    are with <i>interpreters</i> and <i>compilers</i>.
+  </section>
+
+  <section>
+  <h2>Interpreter</h2>
+  An interpreter processes (translates) a high-level language program one line at a time.
+
+  <img src="./interpreter.png">
+
+  The program thus executes immediately as it is being interpreted.
+  As a consequence, everytime it is desired to execute the program, the whole thing
+  must be processed again from the beginning.
+  </section>
+
+  <section>
+  <h2>Compiler</h2>
+  A compiler translates a high-level language program in its entirety into a
+  corresponding machine language <i>executable</i> program.
+
+  <img src="./compiler.png">
+
+  The executable can then be executed on the machine at a later time (and
+  even multiple times without having to re-compile it).
+  </section>
+
+  <section>
+  <h2>Python</h2>
+  <ul>
+  <li>
+    Python is an interpreted language.
+  </li>
+  <li>
+    Actually, that's an oversimplification (perhaps an outright lie),
+    but a useful one for our purposes.
+  </li>
+  <li>
+    We will think of Python as being interpreted basically because it feels
+    like we are executing the source code directly rather than giving the source
+    code file to a tool (compiler) that produces a new (executable) file which we
+    must then run separately.
+  </li>
+  </ul>
+  </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
