@@ -159,8 +159,8 @@
 
   <section>
     <h2>Interpreters &amp; Compilers</h2>
-    The primary tools for processing high-level languages into machine languages
-    are <i>interpreters</i> and <i>compilers</i>.
+    The primary ways for processing high-level languages into machine languages
+    are with <i>interpreters</i> and <i>compilers</i>.
   </section>
 
   <section>
